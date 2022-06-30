@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="card p-4" style="height: 30rem;">
+    <div class="card-header mt-5">
+        <div>
+            <h1 class="text-center">{{data?.name}}</h1>
+            <img [src]="data?.image?.small" alt=""> 
+        </div>
+              
+        <div>
+            <h4 class="text-center">{{data?.id}}</h4>
+            <span>Coin price</span><span>{{data?.market_data.current_price.usd}}</span>
+            <span>Rank:</span> <span>{{data?.market_cap_rank}}</span>
+        </div>
+
+        <h2 [innerHtml]="data?.description?.en.split('.')[0]"></h2>
+        <a>{{data?.links.blockchain_site}}</a>
+      
+    </div>
+    </div>
+    </div>
+    </div>
+  
