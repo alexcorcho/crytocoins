@@ -18,7 +18,6 @@ export class ListCoinComponent implements OnInit {
 
   getCoins(){
     this.api.getCurrency().subscribe(res => {
-      console.log(res);
       this.coins = res
     
   })
