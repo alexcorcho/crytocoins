@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <h1>Available coin</h1>
-        <div>
-            <div *ngFor="let coin of coins ">
+        <div >
+            <div *ngFor="let coin of coins " class="mt-1 p-1">
                 <div class="card" (click)="goDetail(coin)">
-                    <h5 class="card-title">{{coin.name}}</h5>
+                    <h5 class="card-title p-1">{{coin.name}}</h5>
                     <div class="card-body">
                       {{coin.id}}
                     </div>
