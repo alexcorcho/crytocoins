@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './core/login/login.component';
 import { ListCoinComponent } from './modules/list-coin/list-coin.component';
+import { DetailCoinComponent } from './modules/detail-coin/detail-coin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ListCoinComponent
+    ListCoinComponent,
+    DetailCoinComponent
   ],
   imports: [
     BrowserModule,
