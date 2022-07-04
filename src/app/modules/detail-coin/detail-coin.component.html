@@ -1,23 +1,35 @@
-<div class="container">
-    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <div class="card p-4" style="height: 30rem;">
-    <div class="card-header mt-5">
-        <div>
-            <h1 class="text-center">{{data?.name}}</h1>
-            <img [src]="data?.image?.small" alt=""> 
-        </div>
-              
-        <div>
-            <h4 class="text-center">{{data?.id}}</h4>
-            <span>Coin price</span><span>{{data?.market_data.current_price.usd}}</span>
-            <span>Rank:</span> <span>{{data?.market_cap_rank}}</span>
-        </div>
+<div class="container " style="width:40rem ;">
+    <div class="d-flex -vh-100 justify-content-center align-items-center">
+        <div class="card p-4" style="height: 30rem;">
+            <div class="card-header mt-5">        
+                <div class="d-flex justify-content-between mb-2">
+                    <div>
+                        <a routerLink="/listcoin"><i class="bi bi-chevron-left fs-2"></i></a>
+                        <h4 class="text-center d-inline">{{data?.name}}</h4>
+                    </div>
+                    <img  [src]="data?.image?.small" alt=""> 
 
-        <h2 [innerHtml]="data?.description?.en.split('.')[0]"></h2>
-        <a>{{data?.links.blockchain_site}}</a>
-      
+                </div>
+            <span class="text-center">{{data?.id}}</span>
+            <div class="border mt-3" > 
+                <span> Coin price: ${{data?.market_data.current_price.usd}}</span> 
+            <div class="d-flex justify-content-between">
+                <span>Rank:{{data?.market_cap_rank}}</span>  <span>Coin score: {{data?.community_score}}</span>
+            </div>           
+            </div>
+                <div class="mt-3">
+                    <p [innerHtml]="data?.description?.en.split('.')[0]"></p>
+                </div>
+            <div>
+                more Info
+            </div>
+          
+            <a class="d-block">{{data?.links.blockchain_site?.[0]}}</a>
+            <a class="d-block">{{data?.links.blockchain_site?.[0]}}</a>
+            
+
+            </div>
+            <a class="text-end" href="https://www.coingecko.com/es">coingeko</a>
+        </div>
     </div>
-    </div>
-    </div>
-    </div>
-  
+</div>

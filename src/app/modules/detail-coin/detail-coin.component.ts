@@ -25,6 +25,7 @@ export class DetailCoinComponent implements OnInit {
     this.api.getCurrencyById(this.coinId).subscribe(
       res => {
         this.data = res;
+        console.log(res)
       }
     )
   }
