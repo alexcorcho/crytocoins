@@ -1,10 +1,11 @@
 <div class="container">
-    <div class="row">
-        <h1>Available coin</h1>
-        <div >
-            <div *ngFor="let coin of coins " class="mt-1 p-1">
+    <div class="row justify-content-center">
+        
+        <div class="col-sm-4 ">
+            <h2 class="mt-5 mb-4">Available coin</h2>
+            <div *ngFor="let coin of coins " class="mt-1 p-1 ">
                 <div class="card" (click)="goDetail(coin)">
-                    <h5 class="card-title p-1">{{coin.name}}</h5>
+                    <a class="card-title p-1" style="cursor:pointer">{{coin.name}}</a>
                     <div class="card-body">
                       {{coin.id}}
                     </div>
